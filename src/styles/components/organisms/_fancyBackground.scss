@@ -1,0 +1,11 @@
+@use "../../abstracts" as *;
+
+.fancy-background {
+  height: 100vh;
+  width: 100vw;
+  z-index: $z-background;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}

@@ -1,4 +1,4 @@
-@mixin animate($animation, $duration, $method, $times) {
+@mixin animate($animation, $duration, $method, $times: 1) {
   animation: $animation $duration $method $times;
 }
 

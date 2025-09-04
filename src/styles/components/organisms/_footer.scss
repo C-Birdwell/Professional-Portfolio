@@ -3,12 +3,13 @@
 footer.footer {
   grid-area: footer;
   height: $height-footer;
-  background-color: var(--color-primary);
+  background-color: var(--color-background-primary);
   box-sizing: border-box;
   border: 0px solid var(--color-secondary);
   border-top-width: 2px;
   padding: $space-s 0;
   position: relative;
+  z-index: $z-base;
   .row--theme {
     width: 500px;
     position: absolute;

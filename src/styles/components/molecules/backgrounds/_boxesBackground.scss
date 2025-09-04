@@ -1,0 +1,104 @@
+@use "../../../abstracts" as *;
+
+@mixin flipBox($num) {
+  &--#{$num} {
+    @for $i from 0 through 9 {
+      .boxes--#{$i} {
+        .boxes {
+          &_inner {
+            animation-delay: ($num * 0.1s) + ($i * 0.1s) + 0.1s !important;
+            @include animate-background-boxes-row-intro(2s);
+            &_back {
+              animation-delay: ($num * 0.1s) + ($i * 0.1s) + 0.1s !important;
+              @include animate-fade-blink(1s, infinite, 0.35);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.boxes-background {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  flex-direction: column;
+  transition: opacity $speed-050;
+
+  &_row {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: row;
+    margin: -2px;
+    z-index: $z-cloud-1;
+  }
+  .boxes-background_row {
+    @for $i from 0 through 9 {
+      @include flipBox($i);
+    }
+  }
+  &_svg {
+    position: absolute;
+    top: 15vh;
+    height: 80vh;
+    width: 100vw;
+    z-index: $z-cloud-0;
+    transition: transform $speed-100;
+    path {
+      fill: rgba(var(--color-primary-rgb), 0.25);
+      stroke: var(--color-text-primary);
+      stroke-opacity: 0.25;
+    }
+  }
+
+  &--intro {
+    @include animate-fade-in($speed-100);
+    .boxes-background_svg {
+      transform: rotateY(0deg);
+    }
+  }
+  &--outro {
+    //@include animate-fade-out($speed-050);
+    opacity: 0;
+    .boxes-background_svg {
+      transform: translateY(-100vh) rotateY(180deg);
+    }
+  }
+}
+
+.boxes {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  perspective: 1000px;
+  &_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform $speed-025, scale $speed-025;
+    &_front {
+      //background-color: var(--color-background-secondary);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    &_back {
+      background-color: var(--color-secondary);
+      // @include animate-fade-blink(4s, infinite);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+
+      transform: rotateX(180deg);
+    }
+  }
+}

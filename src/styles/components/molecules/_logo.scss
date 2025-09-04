@@ -3,23 +3,41 @@
 div.logo {
   position: relative;
   height: $height-header - 20px;
-
+  cursor: pointer;
   .backdrop {
     position: absolute;
     border-radius: 100%;
-    background-color: transparent;
+    background-color: var(--color-secondary);
+
+    background-image: linear-gradient(
+      var(--color-secondary),
+      var(--color-background-primary) 75%
+    );
+    transition: background-image $speed-050;
     top: 0;
     left: 50%;
     right: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.75);
     width: $height-header - 20px;
+    opacity: 0.5;
   }
-  img {
+}
+
+.logo_svg {
+  width: $height-header - 20px;
+  height: $height-header - 20px;
+  position: relative;
+  z-index: 2;
+  svg {
     cursor: pointer;
     width: 100%;
     display: flex;
     justify-self: center;
     align-self: center;
     height: 100%;
+    path {
+      fill: var(--color-primary);
+      transition: fill $speed-050;
+    }
   }
 }

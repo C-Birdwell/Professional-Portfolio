@@ -1,0 +1,80 @@
+@use "../../../abstracts" as *;
+
+.cloud-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    var(--color-background-secondary) 60%,
+    var(--color-secondary)
+  );
+  overflow: hidden;
+  &--intro {
+    @include animate-slide-in_bottom-vertical(100px, $speed-100);
+  }
+  &--outro {
+    @include animate-slide-out_bottom-vertical(100px, $speed-100);
+  }
+}
+.cloud-background .cloud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../../../../assets/images/wave-white.png);
+  background-size: 1000px 100px;
+}
+.cloud-background .cloud.cloud--1 {
+  animation: wave 30s linear infinite;
+  z-index: $z-cloud-5;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+.cloud-background .cloud.cloud--2 {
+  animation: wave2 15s linear infinite;
+  z-index: $z-cloud-4;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.cloud-background .cloud.cloud--3 {
+  animation: wave 30s linear infinite;
+  z-index: $z-cloud-3;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.cloud-background .cloud.cloud--4 {
+  animation: wave2 5s linear infinite;
+  z-index: $z-cloud-2;
+  opacity: 0.2;
+  animation-delay: -5s;
+  bottom: 25px;
+}
+
+.cloud-background .cloud.cloud--5 {
+  animation: wave1 5s linear infinite;
+  z-index: $z-cloud-1;
+  opacity: 0.2;
+  animation-delay: -5s;
+  bottom: 30px;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes wave2 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}

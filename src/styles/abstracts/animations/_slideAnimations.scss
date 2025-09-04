@@ -57,10 +57,15 @@
   }
 }
 
-@mixin animate-slide_bottom-vertical($amount, $duration) {
-  @include animate.animate(animate-slide_bottom-vertical, $duration, linear, 1);
+@mixin animate-slide-in_bottom-vertical($amount, $duration) {
+  @include animate.animate(
+    animate-slide-in_bottom-vertical,
+    $duration,
+    linear,
+    1
+  );
 
-  @include animate.keyframes(animate-slide_bottom-vertical) {
+  @include animate.keyframes(animate-slide-in_bottom-vertical) {
     from {
       opacity: 0;
       transform: translateY($amount);
@@ -68,6 +73,26 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+}
+
+@mixin animate-slide-out_bottom-vertical($amount, $duration) {
+  @include animate.animate(
+    animate-slide-out_bottom-vertical,
+    $duration,
+    linear,
+    1
+  );
+
+  @include animate.keyframes(animate-slide-out_bottom-vertical) {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY($amount);
     }
   }
 }

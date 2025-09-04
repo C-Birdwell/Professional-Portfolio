@@ -1,15 +1,29 @@
+@use "../../abstracts" as *;
+
 nav {
   background-color: transparent;
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
-
+  justify-content: end;
   a {
     color: var(--color-primary);
-    text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     text-decoration: underline;
   }
+}
+
+div.header_column {
+  max-width: fit-content;
+  a {
+    padding-right: $space-s;
+    margin-right: $space-s;
+    border: 0px solid var(--color-primary);
+    border-right-width: 2px;
+  }
+}
+div.header--cta_column {
+  max-width: 200px;
 }

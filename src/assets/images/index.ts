@@ -1,3 +1,3 @@
 import favicon from "./favicon.png";
-import logo from "./placeholder_logo.svg";
+import logo from "./logo.svg";
 export { favicon, logo };

@@ -8,14 +8,27 @@ import {
   Column,
   Logo,
 } from "@/components";
-import { useStoreSelector } from "@/hooks";
+import { useStoreSelector, useActionCreators } from "@/hooks";
 
 import { linksArray } from "./utils";
 import type { HeaderProps } from "./index.types";
 import type { RootState } from "@/store";
-import { BREAKPOINT_TABLET } from "@/constants";
+import { BREAKPOINT_TABLET, COLOR_DARK } from "@/constants";
+import {
+  _modalSetBackgroundColor,
+  _modalSetVisible,
+  _modalSetModalRoute,
+} from "@/store";
+
+const actionCreators = {
+  _modalSetBackgroundColor,
+  _modalSetVisible,
+  _modalSetModalRoute,
+};
 
 export const Header: FC<HeaderProps> = ({ className }) => {
+  const { _modalSetBackgroundColor, _modalSetVisible, _modalSetModalRoute } =
+    useActionCreators(actionCreators);
   const { width } = useStoreSelector((state: RootState) => state.interface);
   const [isActive, setIsActive] = useState(false);
 
@@ -25,6 +38,12 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
   const onDismiss = () => {
     setIsActive(false);
+  };
+
+  const actionCTA = () => {
+    _modalSetModalRoute("contact");
+    _modalSetBackgroundColor(COLOR_DARK);
+    _modalSetVisible(true);
   };
 
   const desktopLayout = width > BREAKPOINT_TABLET;
@@ -42,6 +61,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
                 links={linksArray}
                 parentName={className}
                 onDismiss={() => {}}
+                actionCTA={actionCTA}
               />
             ) : (
               <MobileNavButton onPress={clickHandler} isActive={isActive} />

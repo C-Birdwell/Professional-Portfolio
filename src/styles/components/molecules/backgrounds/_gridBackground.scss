@@ -1,0 +1,57 @@
+@use "../../../abstracts" as *;
+
+.grid-background {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  &:after {
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left 90%,
+      left top,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: gradient(
+      linear,
+      left 90%,
+      left top,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    transition: transform 0.5s;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    right: 0;
+    width: 200%;
+    height: 100vh;
+    padding: 1px;
+    -webkit-background-clip: content-box;
+    -webkit-backface-visibility: hidden;
+    outline: 1px solid transparent;
+    transform-origin: bottom center;
+    will-change: transform;
+    background-position: center bottom;
+    background-size: 5vh 5vh;
+    background-image: linear-gradient(
+        to right,
+        var(--color-secondary) 1px,
+        transparent 2px
+      ),
+      linear-gradient(to bottom, var(--color-secondary) 2px, transparent 2px);
+  }
+  &--intro {
+    transform: perspective(50vh) rotateX(30deg) scale(2, 2) translateZ(0);
+
+    @include animate-background-grid-intro($speed-100);
+  }
+  &--outro {
+    transform: perspective(50vh) rotateX(0deg) scale(1, 1) translateZ(0);
+    opacity: 0;
+    @include animate-background-grid-outro($speed-100);
+  }
+}

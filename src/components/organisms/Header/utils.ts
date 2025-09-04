@@ -1,14 +1,16 @@
 import type { NavLinkProps } from "@/components/index.types";
 import {
   ThemeColorsTypes,
-  TITLE_CARDS,
   TITLE_HOME,
-  TITLE_MODALS,
-  TITLE_REDUX,
-  URL_CARDS,
+  TITLE_EMPLOYMENT,
+  TITLE_INFORMATION,
+  TITLE_LINKS,
+  TITLE_SKILLS,
+  URL_SKILLS,
+  URL_EMPLOYMENT,
+  URL_INFORMATION,
+  URL_LINKS,
   URL_HOME,
-  URL_MODALS,
-  URL_REDUX,
 } from "@/constants";
 
 const createLinkItem = (
@@ -24,13 +26,15 @@ const createLinkItem = (
   onDismiss: () => {},
 });
 const homeLink = createLinkItem(URL_HOME, TITLE_HOME);
-const modalLink = createLinkItem(URL_MODALS, TITLE_MODALS);
-const cardsLink = createLinkItem(URL_CARDS, TITLE_CARDS);
-const reduxLink = createLinkItem(URL_REDUX, TITLE_REDUX);
+const skillsLink = createLinkItem(URL_SKILLS, TITLE_SKILLS);
+const employmentLink = createLinkItem(URL_EMPLOYMENT, TITLE_EMPLOYMENT);
+const linksLink = createLinkItem(URL_LINKS, TITLE_LINKS);
+const informationLink = createLinkItem(URL_INFORMATION, TITLE_INFORMATION);
 
 export const linksArray: NavLinkProps[] = [
   homeLink,
-  cardsLink,
-  modalLink,
-  reduxLink,
+  skillsLink,
+  employmentLink,
+  linksLink,
+  informationLink,
 ];

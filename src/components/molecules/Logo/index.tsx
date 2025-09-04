@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { ReactSVG } from "react-svg";
+
 import type { LogoProps } from "./index.types";
 import { logo } from "@/assets";
 import { URL_HOME } from "@/constants";
@@ -12,7 +14,14 @@ export const Logo: React.FC<LogoProps> = ({ onDismiss }) => {
 
   return (
     <div className="logo" onClick={onDismiss}>
-      <img onClick={navigateHandler} src={logo} alt={`Logo for ${envTitle}.`} />
+      <ReactSVG
+        onClick={navigateHandler}
+        src={logo}
+        className="logo_svg"
+        title={`Logo for ${envTitle}.`}
+        wrapper="svg"
+      />
+      <div className="backdrop" />
     </div>
   );
 };

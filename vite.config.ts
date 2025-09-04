@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 // Public path URL when served in development or production environments.
-const base = "/React_19-Typescript-Boilerplate";
+// const base = "/React_19-Typescript-Boilerplate";
+
 const css = {
   devSourcemap: true,
 };
@@ -30,7 +31,7 @@ const server = {
 };
 
 export default defineConfig({
-  base,
+  //base,
   css,
   plugins,
   resolve,

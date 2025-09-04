@@ -1,0 +1,31 @@
+@use "../animate" as animate;
+
+@mixin animate-background-grid-intro($duration) {
+  @include animate.animate(animate-background-grid-intro, $duration, linear, 1);
+
+  @include animate.keyframes(animate-background-grid-intro) {
+    from {
+      opacity: 0;
+      transform: perspective(50vh) rotateX(0deg) scale(1, 1) translateZ(0);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(50vh) rotateX(30deg) scale(2, 2) translateZ(0);
+    }
+  }
+}
+
+@mixin animate-background-grid-outro($duration) {
+  @include animate.animate(animate-background-grid-outro, $duration, linear, 1);
+
+  @include animate.keyframes(animate-background-grid-outro) {
+    from {
+      opacity: 1;
+      transform: perspective(50vh) rotateX(30deg) scale(2, 2) translateZ(0);
+    }
+    to {
+      opacity: 0;
+      transform: perspective(50vh) rotateX(0deg) scale(1, 1) translateZ(0);
+    }
+  }
+}

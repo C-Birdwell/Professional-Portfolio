@@ -16,6 +16,6 @@ header.header {
   @include animate-slide_top-vertical(-$height-header, $speed-050);
   .header_row {
     box-sizing: border-box;
-    padding: 0 $space-m;
+    padding: 0 calc($space-l + 2px);
   }
 }

@@ -3,17 +3,19 @@ import { Route, Routes } from "react-router-dom";
 import {
   HomePage,
   NotFoundPage,
-  ModalDemoPage,
-  CardsPage,
-  ReduxExamplePage,
+  EmploymentPage,
+  InformationPage,
+  LinksPage,
+  SkillsPage,
 } from "@/pages";
 import {
   URL_HOME,
-  URL_MODALS,
+  URL_EMPLOYMENT,
+  URL_LINKS,
+  URL_SKILLS,
+  URL_INFORMATION,
   URL_NOT_FOUND,
-  URL_CARDS,
   mainCLS,
-  URL_REDUX,
 } from "@/constants";
 
 export const PagesRoutes: React.FC = () => {
@@ -21,10 +23,10 @@ export const PagesRoutes: React.FC = () => {
     <main className={mainCLS}>
       <Routes>
         <Route path={URL_HOME} index element={<HomePage />} />
-        <Route path={URL_CARDS} element={<CardsPage />} />
-        <Route path={URL_MODALS} element={<ModalDemoPage />} />
-        <Route path={URL_REDUX} element={<ReduxExamplePage />} />
-
+        <Route path={URL_EMPLOYMENT} index element={<EmploymentPage />} />
+        <Route path={URL_LINKS} index element={<LinksPage />} />
+        <Route path={URL_SKILLS} index element={<SkillsPage />} />
+        <Route path={URL_INFORMATION} index element={<InformationPage />} />
         <Route path={URL_NOT_FOUND} element={<NotFoundPage />} />
       </Routes>
     </main>

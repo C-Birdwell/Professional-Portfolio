@@ -15,7 +15,13 @@ $color-dark-alt-rgb: color.channel($color-dark-alt, "red"),
 $color-disabled: #adacac;
 
 $color-primary: #1b7ae4;
-$color-secondary: #e4851b;
+$color-primary-rgb: color.channel($color-primary, "red"),
+  color.channel($color-primary, "green"), color.channel($color-primary, "blue");
+
+$color-secondary: #ff1177;
+$color-secondary-rgb: color.channel($color-secondary, "red"),
+  color.channel($color-secondary, "green"),
+  color.channel($color-secondary, "blue");
 
 $color-success: #0a830a;
 $color-caution: #eed202;

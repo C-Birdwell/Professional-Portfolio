@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
 import { Row, PageTemplate, Card, Column, Button } from "@/components";
 
-export const CardsPage: FC = () => {
+export const LinksPage: FC = () => {
   const initialState = {
     card1: 0,
     card2: 0,
@@ -157,7 +157,7 @@ export const CardsPage: FC = () => {
 
   return (
     <PageTemplate
-      title="Card Animations"
+      title="Links & Documents"
       subtitle="A demonstration of animations built into the Card component."
     >
       <Row gutter={10} breakPoint="tablet">

@@ -8,6 +8,8 @@
   --color-background-rgb: #{$color-light-alt-rgb};
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
+  --color-primary-rgb: #{$color-primary-rgb};
+  --color-secondary-rgb: #{$color-secondary-rgb};
 }
 
 [theme-mode="dark"] {
@@ -17,6 +19,8 @@
   --color-background-rgb: #{$color-dark-alt-rgb};
   --color-primary: #{$color-secondary};
   --color-secondary: #{$color-primary};
+  --color-primary-rgb: #{$color-secondary-rgb};
+  --color-secondary-rgb: #{$color-primary-rgb};
 }
 
 body,

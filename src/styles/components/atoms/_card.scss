@@ -26,7 +26,7 @@ div.card {
       @include animate-slide_in-right(100vw, $speed-050);
     }
     &--bottom {
-      @include animate-slide_bottom-vertical(50vh, $speed-050);
+      @include animate-slide-in_bottom-vertical(50vh, $speed-050);
     }
 
     &--top {

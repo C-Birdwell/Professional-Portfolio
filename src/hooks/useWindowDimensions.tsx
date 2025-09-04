@@ -30,5 +30,5 @@ export const useWindowDimensions = () => {
     };
   }, [dispatch, windowDimensions]);
 
-  return windowDimensions;
+  return null;
 };

@@ -1,10 +1,19 @@
 $floor: 0;
 $above: 1;
 $level-1: 100;
+$level-2: 200;
 
-$z-base: $floor + $above;
+$z-background: $floor + $above;
+$z-cloud-0: $z-background + $above;
+$z-cloud-1: $z-cloud-0 + $above;
+$z-cloud-2: $z-cloud-1 + $above;
+$z-cloud-3: $z-cloud-2 + $above;
+$z-cloud-4: $z-cloud-3 + $above;
+$z-cloud-5: $z-cloud-4 + $above;
+
+$z-base: $level-1 + $above;
 $z-card: $z-base + $above;
 $z-mobile: $z-card + $above;
 $z-header: $z-mobile + $above;
 
-$z-modal: $level-1 + $floor;
+$z-modal: $level-2 + $floor;

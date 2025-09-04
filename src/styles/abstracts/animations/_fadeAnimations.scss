@@ -13,6 +13,35 @@
   }
 }
 
+@mixin animate-fade-out($duration) {
+  @include animate.animate(animate-fade-in, $duration, linear, 1);
+
+  @include animate.keyframes(animate-fade-in) {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin animate-fade-blink($duration, $times: 1, $opacity: 1) {
+  @include animate.animate(animate-fade-blink, $duration, linear, $times);
+
+  @include animate.keyframes(animate-fade-blink) {
+    0% {
+      opacity: $opacity;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: $opacity;
+    }
+  }
+}
+
 @mixin animate-flip-in-right($duration) {
   @include animate.animate(animate-flip-in-right, $duration, linear, 1);
 

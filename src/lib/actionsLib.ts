@@ -9,3 +9,7 @@ export type ActionType = {
 export type CustomActions = {
   customActions?: ActionType[] | undefined | null;
 };
+
+export type OnPress = {
+  onPress: () => void;
+};
