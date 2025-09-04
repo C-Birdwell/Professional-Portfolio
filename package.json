@@ -1,8 +1,8 @@
 {
-  "name": "react_19-typescript-boilerplate",
-  "homepage": "https://c-birdwell.github.io/React_19-Typescript-Boilerplate/",
+  "name": "professional-portfolio",
+  "homepage": "https://c-birdwell.github.io/Professional-Portfolio/",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
