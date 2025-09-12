@@ -37,10 +37,10 @@ div.card {
       @include animate-fade-in($speed-075);
     }
     &--flip-in-right {
-      @include animate-flip-in-right($speed-050);
+      @include animate-flip-in-right($speed-075);
     }
     &--flip-in-left {
-      @include animate-flip-in-left($speed-050);
+      @include animate-flip-in-left($speed-075);
     }
   }
 

@@ -1,3 +1,4 @@
+import { formatLink } from "@/utils";
 import type { NavbarProps } from "./index.types";
 import { NavLink, Column, NavbarCTA } from "@/components";
 
@@ -6,9 +7,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   parentName,
   onDismiss,
   actionCTA,
+  activeLink,
 }) => {
   const linksMapped = links.map((link) => {
     const { target, targetText, type, backgroundTheme } = link;
+    const isActive = formatLink(target) === activeLink;
+
     return (
       <Column
         key={`${parentName}-${targetText}`}
@@ -21,6 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           type={type}
           backgroundTheme={backgroundTheme}
           onDismiss={onDismiss}
+          active={isActive}
         />
       </Column>
     );

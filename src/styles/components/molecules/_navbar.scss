@@ -12,6 +12,25 @@ nav {
     font-weight: bold;
     font-size: 18px;
     text-decoration: underline;
+    position: initial;
+    &.active {
+      color: var(--color-text);
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-top-color: var(--color-text);
+        border-bottom: 0px;
+        bottom: $space-s;
+        left: 50%;
+        transform: translateX(calc(-50% - 10px));
+      }
+    }
   }
 }
 

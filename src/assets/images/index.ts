@@ -1,3 +1,5 @@
 import favicon from "./favicon.png";
 import logo from "./logo.svg";
-export { favicon, logo };
+import star from "./star.svg";
+export { favicon, logo, star };
+export * from "./skills";

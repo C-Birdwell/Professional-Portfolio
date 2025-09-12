@@ -6,16 +6,31 @@ export const PageTemplate: React.FC<PageDefaultProps> = ({
   title,
   subtitle,
   children,
+  textContent,
 }) => {
   const classNames = `${convertVariantClassNames("page", [title])}`;
+
+  const renderTextContent = () => {
+    return textContent?.map((val, i) => {
+      return i > 0 ? (
+        <p key={`page-text-content-${i}`}>{val}</p>
+      ) : (
+        <h4 key={`page-text-content-${i}`}>{val}</h4>
+      );
+    });
+  };
+
   return (
     <div className={classNames}>
-      <Card border parentName="page">
+      <Card border parentName="page" marginBottom={0}>
         <div className={`page_card_title`}>
           <Heading size={2}>{title}</Heading>
           <Heading size={3}>{subtitle}</Heading>
         </div>
-        <section>{children}</section>
+        <section>
+          {children}
+          {renderTextContent()}
+        </section>
       </Card>
     </div>
   );

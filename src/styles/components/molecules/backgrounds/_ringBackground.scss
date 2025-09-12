@@ -1,0 +1,82 @@
+@use "../../../abstracts" as *;
+
+$circle-i: 20;
+
+@mixin create-ring($color, $speed, $direction: true) {
+  opacity: 0.5;
+  @include linear-gradient($color, transparent 70%);
+  @if $direction {
+    @include animate-spin-clock($speed);
+  } @else {
+    @include animate-spin-counter($speed);
+  }
+}
+
+.ring-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  &_layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_circle {
+      border-radius: 100%;
+      height: 100%;
+      width: 100%;
+      &--1 {
+        @include create-ring($color-secondary, 2.75s);
+      }
+      &--3 {
+        @include create-ring($color-dark, 2.5s, false);
+      }
+
+      &--5 {
+        @include create-ring($color-light, 2.25s);
+      }
+      &--7 {
+        @include create-ring($color-primary, 2s, false);
+      }
+      &--9 {
+        @include create-ring($color-secondary, 1.75s);
+      }
+      &--11 {
+        @include create-ring($color-danger, 1.5s, false);
+      }
+      &--13 {
+        @include create-ring($color-caution, 1.25s);
+      }
+      &--15 {
+        @include create-ring($color-success, 1s, false);
+      }
+      &--17 {
+        @include create-ring($color-light, 0.75s);
+      }
+
+      &--19 {
+        @include create-ring($color-dark, 0.5s, false);
+      }
+
+      &--blank {
+        background-color: var(--color-background-secondary);
+      }
+    }
+  }
+  &--intro {
+    @include animate-slide-in_bottom-vertical(100vh, $speed-100);
+  }
+  &--outro {
+    @include animate-slide-out_bottom-vertical(100vh, $speed-100);
+  }
+}
+
+@for $i from 0 through $circle-i {
+  .ring-background_layer--#{$i} {
+    $circle-dim: ($i * 5vw) + 5vw;
+    z-index: $circle-i - $i;
+    width: $circle-dim;
+    height: $circle-dim;
+    bottom: $circle-dim * -0.5;
+  }
+}

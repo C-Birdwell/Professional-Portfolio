@@ -12,9 +12,9 @@ import { useStoreSelector, useActionCreators } from "@/hooks";
 
 import { linksArray } from "./utils";
 import type { HeaderProps } from "./index.types";
-import type { RootState } from "@/store";
 import { BREAKPOINT_TABLET, COLOR_DARK } from "@/constants";
 import {
+  type RootState,
   _modalSetBackgroundColor,
   _modalSetVisible,
   _modalSetModalRoute,
@@ -29,7 +29,9 @@ const actionCreators = {
 export const Header: FC<HeaderProps> = ({ className }) => {
   const { _modalSetBackgroundColor, _modalSetVisible, _modalSetModalRoute } =
     useActionCreators(actionCreators);
-  const { width } = useStoreSelector((state: RootState) => state.interface);
+  const { width, activeLink } = useStoreSelector(
+    (state: RootState) => state.interface
+  );
   const [isActive, setIsActive] = useState(false);
 
   const clickHandler = () => {
@@ -62,6 +64,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
                 parentName={className}
                 onDismiss={() => {}}
                 actionCTA={actionCTA}
+                activeLink={activeLink}
               />
             ) : (
               <MobileNavButton onPress={clickHandler} isActive={isActive} />

@@ -42,3 +42,6 @@ export const setClassNames = (
     classNamesList
   )}${convertParentClassName(currentName, parentName)}`;
 };
+
+export const formatLink = (target: string) =>
+  target === "/" ? "home" : target.split("").slice(1).join("");

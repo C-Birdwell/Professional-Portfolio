@@ -4,12 +4,17 @@ $level-1: 100;
 $level-2: 200;
 
 $z-background: $floor + $above;
-$z-cloud-0: $z-background + $above;
-$z-cloud-1: $z-cloud-0 + $above;
-$z-cloud-2: $z-cloud-1 + $above;
-$z-cloud-3: $z-cloud-2 + $above;
-$z-cloud-4: $z-cloud-3 + $above;
-$z-cloud-5: $z-cloud-4 + $above;
+$z-background-0: $z-background + $above;
+
+$z-background-1: $z-background-0 + $above;
+$z-background-2: $z-background-1 + $above;
+$z-background-3: $z-background-2 + $above;
+$z-background-4: $z-background-3 + $above;
+$z-background-5: $z-background-4 + $above;
+$z-background-6: $z-background-5 + $above;
+$z-background-7: $z-background-6 + $above;
+$z-background-8: $z-background-7 + $above;
+$z-background-9: $z-background-8 + $above;
 
 $z-base: $level-1 + $above;
 $z-card: $z-base + $above;

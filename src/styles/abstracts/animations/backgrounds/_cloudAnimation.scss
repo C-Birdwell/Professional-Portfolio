@@ -1,0 +1,18 @@
+@use "../animate" as animate;
+
+@mixin animate-wave($duration, $direction: true) {
+  @include animate.animate(animate-wave, $duration, linear, infinite);
+
+  @include animate.keyframes(animate-wave) {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      @if $direction {
+        background-position-x: 1000px;
+      } @else {
+        background-position-x: -1000px;
+      }
+    }
+  }
+}

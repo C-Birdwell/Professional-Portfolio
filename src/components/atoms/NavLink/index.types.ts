@@ -4,6 +4,7 @@ export type NavLinkProps = {
   target: string;
   targetText: string;
   type: "text" | "button";
+  active: boolean;
 } & BackgroundTheme &
   OnDismiss;
 

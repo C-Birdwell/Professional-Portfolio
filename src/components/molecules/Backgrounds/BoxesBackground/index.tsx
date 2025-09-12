@@ -5,10 +5,10 @@ import { convertVariantClassNames } from "@/utils";
 import { logo } from "@/assets";
 
 export const BoxesBackground: React.FC<BoxesBackgroundProps> = ({
-  className,
+  animation,
 }) => {
   const cls = "boxes-background";
-  const nameClass = convertVariantClassNames(cls, [className]);
+  const nameClass = convertVariantClassNames(cls, [animation]);
 
   const renderBoxes = (num: number) => {
     const cloudArray = [];

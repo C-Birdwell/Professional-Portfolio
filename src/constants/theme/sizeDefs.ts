@@ -12,7 +12,7 @@ export const SCREEN_LAPTOP = "laptop";
 export const SCREEN_TABLET = "tablet";
 export const SCREEN_MOBILE = "mobile";
 
-export const ThemeScreenSizesTypes = [
+export const themeScreenSizesTypes = [
   SCREEN_DESKTOP,
   SCREEN_LAPTOP,
   SCREEN_TABLET,
@@ -20,7 +20,7 @@ export const ThemeScreenSizesTypes = [
   "",
 ] as const;
 
-export const ThemeSizeTypes = [
+export const themeSizeTypes = [
   SIZE_XS,
   SIZE_S,
   SIZE_M,

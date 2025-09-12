@@ -7,6 +7,7 @@ import {
   _backgroundSetBackground,
   type RootState,
 } from "@/store";
+import { INTRO, OUTRO } from "@/constants";
 
 const actionCreators = {
   _backgroundSetNextBackground,
@@ -27,7 +28,7 @@ export const useFancyBackground = () => {
 
   useEffect(() => {
     const backgroundHandler = () => {
-      _backgroundSetAnimation("intro");
+      _backgroundSetAnimation(INTRO);
       _backgroundSetBackground(backgroundNext);
       _backgroundSetNextBackground(null);
     };
@@ -36,7 +37,7 @@ export const useFancyBackground = () => {
       if (background === backgroundNext) {
         _backgroundSetNextBackground(null);
       } else {
-        _backgroundSetAnimation("outro");
+        _backgroundSetAnimation(OUTRO);
         setTimeout(() => {
           backgroundHandler();
         }, 1000);
@@ -48,6 +49,7 @@ export const useFancyBackground = () => {
     backgroundNext,
     _backgroundSetNextBackground,
     _backgroundSetAnimation,
+    _backgroundSetBackground,
   ]);
 
   return null;

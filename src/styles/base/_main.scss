@@ -5,7 +5,7 @@ main.main {
   box-sizing: border-box;
   grid-area: main;
   width: 100%;
-  padding-top: $height-header;
+  padding: $height-header 0 $space-l 0;
   min-height: inherit;
   box-sizing: border-box;
   background-color: var(--color-background-secondary);

@@ -1,3 +1,5 @@
+import type { AnimationState } from "@/lib";
+
 type BackgroundNext = {
   backgroundNext:
     | "home"
@@ -10,5 +12,5 @@ type BackgroundNext = {
 
 export type InitialState = {
   background: string;
-  animation: "intro" | "outro";
-} & BackgroundNext;
+} & AnimationState &
+  BackgroundNext;

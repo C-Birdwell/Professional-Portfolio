@@ -1,0 +1,27 @@
+@use "../animate" as animate;
+
+@mixin animate-spin-clock($duration) {
+  @include animate.animate(animate-spin-clock, $duration, linear, infinite);
+
+  @include animate.keyframes(animate-spin-clock) {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+}
+
+@mixin animate-spin-counter($duration) {
+  @include animate.animate(animate-spin-counter, $duration, linear, infinite);
+
+  @include animate.keyframes(animate-spin-counter) {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(-360deg);
+    }
+  }
+}

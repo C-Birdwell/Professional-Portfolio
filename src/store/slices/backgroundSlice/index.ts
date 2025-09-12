@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { BACKGROUND } from "@/constants";
+import { BACKGROUND, INTRO } from "@/constants";
 
 import type { InitialState } from "./index.types";
 
 const initialState: InitialState = {
-  animation: "intro",
+  animation: INTRO,
   background: "home",
   backgroundNext: null,
 };

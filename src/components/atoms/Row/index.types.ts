@@ -1,4 +1,4 @@
-import type { ThemeSizeTypes, ThemeScreenSizesTypes } from "@/constants";
+import type { themeSizeTypes, themeScreenSizesTypes } from "@/constants";
 import type {
   ClassNamesList,
   PropChildren,
@@ -7,8 +7,8 @@ import type {
 } from "@/lib";
 
 export type RowProps = {
-  gutter?: (typeof ThemeSizeTypes)[number];
-  breakPoint?: (typeof ThemeScreenSizesTypes)[number];
+  gutter?: (typeof themeSizeTypes)[number];
+  breakPoint?: (typeof themeScreenSizesTypes)[number];
 } & ParentClassName &
   ClassName &
   ClassNamesList &

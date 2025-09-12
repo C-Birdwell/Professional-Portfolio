@@ -5,7 +5,8 @@
   --color-text-primary: #{$color-dark};
   --color-background-primary: #{$color-light};
   --color-background-secondary: #{$color-light-alt};
-  --color-background-rgb: #{$color-light-alt-rgb};
+  --color-background-rgb: #{$color-light-rgb};
+  --color-background-alt-rgb: #{$color-light-alt-rgb};
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
   --color-primary-rgb: #{$color-primary-rgb};
@@ -16,7 +17,8 @@
   --color-text-primary: #{$color-light};
   --color-background-primary: #{$color-dark};
   --color-background-secondary: #{$color-dark-alt};
-  --color-background-rgb: #{$color-dark-alt-rgb};
+  --color-background-rgb: #{$color-dark-rgb};
+  --color-background-alt-rgb: #{$color-dark-alt-rgb};
   --color-primary: #{$color-secondary};
   --color-secondary: #{$color-primary};
   --color-primary-rgb: #{$color-secondary-rgb};

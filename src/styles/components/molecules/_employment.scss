@@ -1,0 +1,16 @@
+@use "../../abstracts" as *;
+
+#root .card--employment {
+  background-color: transparent;
+  h4 {
+    color: var(--color-primary);
+    margin-bottom: $space-s;
+  }
+  h5 {
+    color: var(--color-secondary);
+    margin-bottom: $space-s;
+  }
+  &_industry {
+    font-style: italic;
+  }
+}

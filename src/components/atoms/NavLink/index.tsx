@@ -2,10 +2,14 @@ import { useNavigate, Link } from "react-router";
 
 import { Button } from "@/components";
 import { useActionCreators } from "@/hooks";
-import { _backgroundSetNextBackground } from "@/store";
+import { _backgroundSetNextBackground, _interfaceSetActiveLink } from "@/store";
+import { formatLink } from "@/utils";
 import type { NavLinkProps } from "./index.types";
 
-const actionCreators = { _backgroundSetNextBackground };
+const actionCreators = {
+  _backgroundSetNextBackground,
+  _interfaceSetActiveLink,
+};
 
 export const NavLink: React.FC<NavLinkProps> = ({
   target,
@@ -13,15 +17,17 @@ export const NavLink: React.FC<NavLinkProps> = ({
   type = "text",
   backgroundTheme = "primary",
   onDismiss,
+  active,
 }) => {
-  const { _backgroundSetNextBackground } = useActionCreators(actionCreators);
+  const { _backgroundSetNextBackground, _interfaceSetActiveLink } =
+    useActionCreators(actionCreators);
   const navigate = useNavigate();
 
   const linkHandler = () => {
     window.scrollTo(0, 0);
-    _backgroundSetNextBackground(
-      target === "/" ? "home" : target.split("").slice(1).join("")
-    );
+
+    _backgroundSetNextBackground(formatLink(target));
+    _interfaceSetActiveLink(formatLink(target));
     onDismiss?.();
   };
 
@@ -31,7 +37,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
   };
 
   const navLink = (
-    <Link to={target} onClick={linkHandler}>
+    <Link to={target} onClick={linkHandler} className={active ? "active" : ""}>
       {targetText}
     </Link>
   );

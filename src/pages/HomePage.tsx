@@ -1,11 +1,12 @@
 import { PageTemplate } from "@/components";
-const envTitle = import.meta.env.VITE_API_TITLE;
-const envOwner = import.meta.env.VITE_API_OWNER;
+import { ENV_OWNER, ENV_TITLE, textHomeData } from "@/constants";
 
 export const HomePage: React.FC = () => {
   return (
-    <PageTemplate title={envTitle} subtitle={`Created by ${envOwner}`}>
-      <p>Hello World</p>
-    </PageTemplate>
+    <PageTemplate
+      title={ENV_TITLE}
+      subtitle={`The portfolio website of ${ENV_OWNER}.`}
+      textContent={textHomeData}
+    />
   );
 };

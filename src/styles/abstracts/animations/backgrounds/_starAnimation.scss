@@ -1,0 +1,68 @@
+@use "../animate" as animate;
+
+@mixin animate-star-inset-outer($duration) {
+  @include animate.animate(
+    animate-star-inset-outer,
+    $duration,
+    linear,
+    infinite
+  );
+
+  @include animate.keyframes(animate-star-inset-outer) {
+    0% {
+      fill: var(--color-background-secondary);
+    }
+    25% {
+      fill: var(--color-secondary);
+    }
+    50% {
+      fill: var(--color-text-primary);
+    }
+    75% {
+      fill: var(--color-primary);
+    }
+    100% {
+      fill: var(--color-background-secondary);
+    }
+  }
+}
+
+@mixin animate-star-inset-inner($duration) {
+  @include animate.animate(
+    animate-star-inset-inner,
+    $duration,
+    linear,
+    infinite
+  );
+
+  @include animate.keyframes(animate-star-inset-inner) {
+    0% {
+      transform: translateY(-50%) translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateY(-50%) translateX(-50%) scale(0.1);
+    }
+    75% {
+      transform: translateY(-50%) translateX(-50%) scale(1.25);
+    }
+    100% {
+      transform: translateY(-50%) translateX(-50%) scale(1);
+    }
+  }
+}
+
+@mixin animate-star-full($duration) {
+  @include animate.animate(animate-star-full, $duration, linear, infinite);
+
+  @include animate.keyframes(animate-star-full) {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    50% {
+      transform: rotateZ(180deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+}

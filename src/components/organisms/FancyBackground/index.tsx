@@ -1,8 +1,15 @@
-import { GridBackground, CloudBackground, BoxesBackground } from "@/components";
+import {
+  GridBackground,
+  CloudBackground,
+  BoxesBackground,
+  RingBackground,
+  StarBackground,
+} from "@/components";
 import { useFancyBackground, useStoreSelector } from "@/hooks";
 import { type RootState } from "@/store";
 import {
   FANCY_BACKGROUND_HOME,
+  FANCY_BACKGROUND_LINKS,
   FANCY_BACKGROUND_SKILLS,
   FANCY_BACKGROUND_HISTORY,
 } from "./utils";
@@ -16,13 +23,16 @@ export const FancyBackground = () => {
   const renderBackground = () => {
     switch (background) {
       case FANCY_BACKGROUND_HOME:
-        return <GridBackground className={animation} />;
+        return <BoxesBackground animation={animation} />;
       case FANCY_BACKGROUND_SKILLS:
-        return <CloudBackground className={animation} />;
+        return <StarBackground animation={animation} />;
       case FANCY_BACKGROUND_HISTORY:
-        return <BoxesBackground className={animation} />;
+        return <CloudBackground animation={animation} />;
+      case FANCY_BACKGROUND_LINKS:
+        return <RingBackground animation={animation} />;
+
       default:
-        return <GridBackground className={animation} />;
+        return <GridBackground animation={animation} />;
     }
   };
 

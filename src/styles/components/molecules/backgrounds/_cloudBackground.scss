@@ -26,55 +26,38 @@
   background-size: 1000px 100px;
 }
 .cloud-background .cloud.cloud--1 {
-  animation: wave 30s linear infinite;
-  z-index: $z-cloud-5;
+  z-index: $z-background-5;
   opacity: 1;
   animation-delay: 0s;
   bottom: 0;
+  @include animate-wave(10s);
 }
 .cloud-background .cloud.cloud--2 {
-  animation: wave2 15s linear infinite;
-  z-index: $z-cloud-4;
+  z-index: $z-background-4;
   opacity: 0.5;
   animation-delay: -5s;
   bottom: 10px;
+  @include animate-wave(15s, false);
 }
 .cloud-background .cloud.cloud--3 {
-  animation: wave 30s linear infinite;
-  z-index: $z-cloud-3;
+  z-index: $z-background-3;
   opacity: 0.2;
   animation-delay: -2s;
   bottom: 15px;
+  @include animate-wave(10s);
 }
 .cloud-background .cloud.cloud--4 {
-  animation: wave2 5s linear infinite;
-  z-index: $z-cloud-2;
+  z-index: $z-background-2;
   opacity: 0.2;
   animation-delay: -5s;
   bottom: 25px;
+  @include animate-wave(5s, false);
 }
 
 .cloud-background .cloud.cloud--5 {
-  animation: wave1 5s linear infinite;
-  z-index: $z-cloud-1;
+  z-index: $z-background-1;
   opacity: 0.2;
   animation-delay: -5s;
   bottom: 30px;
-}
-
-@keyframes wave {
-  0% {
-    background-position-x: 0px;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-@keyframes wave2 {
-  0% {
-    background-position-x: 0px;
-  }
-  100% {
-    background-position-x: -1000px;
-  }
+  @include animate-wave(5s);
 }

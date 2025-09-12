@@ -1,12 +1,16 @@
 @use "sass:color";
 
 $color-light: #fafafa;
+$color-light-rgb: color.channel($color-light, "red"),
+  color.channel($color-light, "green"), color.channel($color-light, "blue");
 $color-light-alt: #cecece;
 $color-light-alt-rgb: color.channel($color-light-alt, "red"),
   color.channel($color-light-alt, "green"),
   color.channel($color-light-alt, "blue");
 
 $color-dark: #333333;
+$color-dark-rgb: color.channel($color-dark, "red"),
+  color.channel($color-dark, "green"), color.channel($color-dark, "blue");
 $color-dark-alt: #4c4c4c;
 $color-dark-alt-rgb: color.channel($color-dark-alt, "red"),
   color.channel($color-dark-alt, "green"),

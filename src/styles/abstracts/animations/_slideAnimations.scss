@@ -96,3 +96,23 @@
     }
   }
 }
+
+@mixin animate-slide-out_top-vertical($amount, $duration) {
+  @include animate.animate(
+    animate-slide-out_top-vertical,
+    $duration,
+    linear,
+    1
+  );
+
+  @include animate.keyframes(animate-slide-out_top-vertical) {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY($amount * -1);
+    }
+  }
+}

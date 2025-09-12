@@ -3,10 +3,9 @@ import { ReactSVG } from "react-svg";
 
 import type { LogoProps } from "./index.types";
 import { logo } from "@/assets";
-import { URL_HOME } from "@/constants";
+import { ENV_TITLE, URL_HOME } from "@/constants";
 
 export const Logo: React.FC<LogoProps> = ({ onDismiss }) => {
-  const envTitle = import.meta.env.VITE_API_TITLE;
   const navigate = useNavigate();
   const navigateHandler = () => {
     navigate(URL_HOME);
@@ -18,7 +17,7 @@ export const Logo: React.FC<LogoProps> = ({ onDismiss }) => {
         onClick={navigateHandler}
         src={logo}
         className="logo_svg"
-        title={`Logo for ${envTitle}.`}
+        title={`Logo for ${ENV_TITLE}.`}
         wrapper="svg"
       />
       <div className="backdrop" />

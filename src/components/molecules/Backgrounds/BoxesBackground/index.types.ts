@@ -1,1 +1,2 @@
-export type BoxesBackgroundProps = { className: string };
+import type { AnimationState } from "@/lib";
+export type BoxesBackgroundProps = AnimationState;

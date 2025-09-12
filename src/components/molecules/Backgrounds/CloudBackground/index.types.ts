@@ -1,1 +1,3 @@
-export type CloudBackgroundProps = { className: string };
+import type { AnimationState } from "@/lib";
+
+export type CloudBackgroundProps = AnimationState;

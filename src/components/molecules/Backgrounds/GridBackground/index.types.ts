@@ -1,1 +1,3 @@
-export type GridBackgroundProps = { className: string };
+import type { AnimationState } from "@/lib";
+
+export type GridBackgroundProps = AnimationState;

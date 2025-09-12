@@ -2,9 +2,9 @@ import type { CloudBackgroundProps } from "./index.types";
 import { convertVariantClassNames } from "@/utils";
 
 export const CloudBackground: React.FC<CloudBackgroundProps> = ({
-  className,
+  animation,
 }) => {
-  const nameClass = convertVariantClassNames("cloud-background", [className]);
+  const nameClass = convertVariantClassNames("cloud-background", [animation]);
 
   const renderClouds = (num: number) => {
     const cloudArray = [];
