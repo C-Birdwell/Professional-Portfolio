@@ -11,5 +11,5 @@ export type CustomActions = {
 };
 
 export type OnPress = {
-  onPress: () => void;
+  onPress?: () => void;
 };
