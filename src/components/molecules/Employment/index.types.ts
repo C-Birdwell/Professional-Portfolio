@@ -1,7 +1,7 @@
-import type { Employment } from "@/lib";
+import type { Employment, FlipIn } from "@/lib";
 
 export type EmploymentProps = {
   employment: Employment;
-  flipIn: "left" | "right";
+
   lastItem: boolean;
-};
+} & FlipIn;

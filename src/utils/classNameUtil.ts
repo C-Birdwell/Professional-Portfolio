@@ -45,3 +45,6 @@ export const setClassNames = (
 
 export const formatLink = (target: string) =>
   target === "/" ? "home" : target.split("").slice(1).join("");
+
+export const arrayJoin = <T>(array: T[], separator: string) =>
+  array.join(separator);

@@ -1,0 +1,35 @@
+@use "../../abstracts" as *;
+
+.skill_image {
+  max-width: 200px;
+  width: 100%;
+  max-height: 200px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.card.card--skill {
+  background-color: transparent;
+}
+
+[theme-mode="dark"] {
+  .card--aws-lambda-aws-ec2-aws-s3,
+  .card--nodejs-npm {
+    .skill_image {
+      background-color: $color-light;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.row--skill_labels {
+  margin-top: $space-l;
+  p {
+    font-weight: bold;
+    font-size: 15px;
+  }
+}

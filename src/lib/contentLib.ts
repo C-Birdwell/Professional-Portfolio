@@ -5,3 +5,5 @@ export type Employment = {
   date: string;
   text: string;
 };
+
+export type SkillsImageData = { path: string; labels: string[] }[];

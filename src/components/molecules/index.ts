@@ -1,3 +1,4 @@
+export * from "./AWSCertification";
 export * from "./Backgrounds";
 export * from "./Employment";
 export * from "./InputField";

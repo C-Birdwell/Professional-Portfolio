@@ -2,6 +2,7 @@ import image_aws from "./aws.png";
 import image_babel from "./babel.png";
 import image_css from "./css.png";
 import image_figma from "./figma.png";
+import image_flask from "./flask.png";
 import image_git from "./git.png";
 import image_html from "./html.png";
 import image_javascript from "./javascript.png";
@@ -23,6 +24,7 @@ export {
   image_babel,
   image_css,
   image_figma,
+  image_flask,
   image_git,
   image_html,
   image_javascript,
