@@ -14,7 +14,7 @@ export const Employment: React.FC<EmploymentProps> = ({
       flipIn={flipIn}
       marginBottom={lastItem ? 0 : 20}
     >
-      <Row>
+      <Row breakPoint="tablet">
         <Column parentName="card--employment" classNames={["left"]}>
           <Heading size={4}>{company}</Heading>
           <Heading size={5}>{role}</Heading>

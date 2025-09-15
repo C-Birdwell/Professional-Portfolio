@@ -6,7 +6,7 @@ export const AWSCertification = () => {
   const imageDev = awsImageData[1];
 
   return (
-    <Row gutter={10}>
+    <Row gutter={10} breakPoint="tablet">
       <Column>
         <Skill
           path={imagePract.path}

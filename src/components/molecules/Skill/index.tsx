@@ -26,7 +26,9 @@ export const Skill: React.FC<SkillProps> = ({ path, labels, flipIn }) => {
         </div>
       </Column>
       <Column>
-        <Row classNames={["skill_labels"]}>{renderLabels()}</Row>
+        <Row classNames={["skill_labels"]} breakPoint="tablet">
+          {renderLabels()}
+        </Row>
       </Column>
     </Card>
   );

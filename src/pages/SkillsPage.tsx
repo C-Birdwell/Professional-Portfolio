@@ -27,7 +27,7 @@ export const SkillsPage: React.FC = () => {
   const renderRows = () => {
     return chunkedSkills.map((val, i) => {
       return (
-        <Row key={`skill-row-${i}`} gutter={10}>
+        <Row key={`skill-row-${i}`} gutter={10} breakPoint="tablet">
           {renderContent(val)}
         </Row>
       );
