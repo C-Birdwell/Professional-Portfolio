@@ -5,10 +5,13 @@ import { convertVariantClassNames } from "@/utils";
 export const PageTemplate: React.FC<PageDefaultProps> = ({
   title,
   subtitle,
+  customClass,
   children,
   textContent,
 }) => {
-  const classNames = `${convertVariantClassNames("page", [title])}`;
+  const classNames = `${convertVariantClassNames("page", [
+    customClass ? customClass : title,
+  ])}`;
 
   const renderTextContent = () => {
     return textContent?.map((val, i) => {

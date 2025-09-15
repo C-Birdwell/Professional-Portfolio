@@ -25,7 +25,7 @@ export const Logo: React.FC<LogoProps> = ({ onDismiss }) => {
         <div className="logo_image_backdrop" />
       </div>
 
-      <h1>
+      <h1 className="logo_text">
         <span className="top">
           <span className="top_left">Web</span>
           <span className="top_right"> By</span>

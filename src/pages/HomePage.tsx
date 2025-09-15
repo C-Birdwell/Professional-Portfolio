@@ -7,6 +7,7 @@ export const HomePage: React.FC = () => {
       title={ENV_TITLE}
       subtitle={`The portfolio website of ${ENV_OWNER}.`}
       textContent={textHomeData}
+      customClass="home"
     />
   );
 };
