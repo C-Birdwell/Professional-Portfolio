@@ -6,7 +6,7 @@ import { chunkArray } from "@/utils";
 const chunkedLinks = chunkArray(linksArray, 3);
 
 export const LinksPage: React.FC = () => {
-  const renderContent = (data: AnchorProp) => {
+  const renderContent = (data: AnchorProp[]) => {
     return data.map((link, i) => {
       const { text, href, target } = link;
       return (
