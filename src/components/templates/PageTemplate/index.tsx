@@ -31,8 +31,8 @@ export const PageTemplate: React.FC<PageDefaultProps> = ({
           <Heading size={3}>{subtitle}</Heading>
         </div>
         <section>
-          {children}
           {renderTextContent()}
+          {children}
         </section>
       </Card>
     </div>
