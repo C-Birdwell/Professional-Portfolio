@@ -1,6 +1,6 @@
-import type { AnchorProp } from "./index.types";
+import type { LinksArray } from "@/lib";
 
-export const linksArray: AnchorProp[] = [
+export const linksArray: LinksArray = [
   {
     text: "LinkedIn",
     href: "https://www.linkedin.com/in/colin-birdwell/",

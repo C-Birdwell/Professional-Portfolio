@@ -1,4 +1,5 @@
 export * from "./actionsLib";
+export * from "./anchorLib";
 export * from "./animationLib";
 export * from "./commonLib";
 export * from "./contentLib";

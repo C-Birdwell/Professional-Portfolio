@@ -1,0 +1,14 @@
+@use "../../abstracts/" as *;
+
+a.anchor {
+  text-decoration: none;
+  color: $color-caution;
+  border: 0px solid $color-caution;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  margin-bottom: $space-s;
+  padding: 0 $space-s $space-xs $space-s;
+  width: max-content;
+  border-bottom-left-radius: $border-radius;
+  font-size: 20px;
+}

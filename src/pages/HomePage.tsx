@@ -1,4 +1,4 @@
-import { Column, PageTemplate, Row } from "@/components";
+import { Anchor, Column, PageTemplate, Row } from "@/components";
 import { ENV_OWNER, ENV_TITLE, textHomeData } from "@/constants";
 
 export const HomePage: React.FC = () => {
@@ -6,12 +6,13 @@ export const HomePage: React.FC = () => {
     return (
       <Row>
         <Column>
-          <a href="tel:1-713-542-4597">Phone: (713)-542-4597</a>
+          <Anchor href="tel:1-713-542-4597" text="Phone: (713) 542 - 4597" />
         </Column>
-        <Column>
-          <a href="mailto:Web.By.Birdwell@gmail.com" target="_top">
-            Email: Web.By.Birdwell@gmail.com
-          </a>
+        <Column classNames={["align-end"]}>
+          <Anchor
+            href="mailto:Web.By.Birdwell@gmail.com"
+            text="Email: Web.By.Birdwell@gmail.com"
+          />
         </Column>
       </Row>
     );

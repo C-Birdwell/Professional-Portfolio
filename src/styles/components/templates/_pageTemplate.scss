@@ -13,7 +13,7 @@ div.page {
     height: 100%;
     background-color: rgba(var(--color-background-rgb), 0.85);
     overflow: hidden;
-    @include animate-fade-in($speed-075);
+    @include animate-slide_in-vertical(100vh, $speed-100);
 
     &_title {
       h2 {
