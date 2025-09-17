@@ -79,7 +79,11 @@ export const Header: FC<HeaderProps> = ({ className }) => {
             className="mobile"
             onDismiss={onDismiss}
           />
-          <MobileNav links={linksArray} onDismiss={onDismiss} />
+          <MobileNav
+            links={linksArray}
+            onDismiss={onDismiss}
+            actionCTA={actionCTA}
+          />
         </>
       )}
     </>

@@ -10,8 +10,8 @@ import { type RootState } from "@/store";
 import {
   FANCY_BACKGROUND_HOME,
   FANCY_BACKGROUND_LINKS,
-  FANCY_BACKGROUND_SKILLS,
   FANCY_BACKGROUND_HISTORY,
+  FANCY_BACKGROUND_INFO,
 } from "./utils";
 
 export const FancyBackground = () => {
@@ -24,7 +24,7 @@ export const FancyBackground = () => {
     switch (background) {
       case FANCY_BACKGROUND_HOME:
         return <BoxesBackground animation={animation} />;
-      case FANCY_BACKGROUND_SKILLS:
+      case FANCY_BACKGROUND_INFO:
         return <StarBackground animation={animation} />;
       case FANCY_BACKGROUND_HISTORY:
         return <CloudBackground animation={animation} />;
