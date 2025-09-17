@@ -13,4 +13,13 @@
   &_industry {
     font-style: italic;
   }
+  @media only screen and (max-width: $breakpoint-tablet) {
+    h4,
+    h5 {
+      text-align: center;
+    }
+    &_industry {
+      margin-bottom: $space-l;
+    }
+  }
 }

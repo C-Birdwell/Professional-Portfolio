@@ -1,12 +1,12 @@
 import { Anchor, Column, PageTemplate, Row } from "@/components";
 import { linksArray } from "@/constants";
-import type { AnchorProp } from "@/lib";
+import type { LinksArray } from "@/lib";
 import { chunkArray } from "@/utils";
 
 const chunkedLinks = chunkArray(linksArray, 3);
 
 export const LinksPage: React.FC = () => {
-  const renderContent = (data: AnchorProp[]) => {
+  const renderContent = (data: LinksArray) => {
     return data.map((link, i) => {
       const { text, href, target } = link;
       return (
@@ -30,6 +30,7 @@ export const LinksPage: React.FC = () => {
   return (
     <PageTemplate
       title="Links & Documents"
+      customClass="links"
       subtitle="A demonstration of animations built into the Card component."
     >
       {renderRows()}

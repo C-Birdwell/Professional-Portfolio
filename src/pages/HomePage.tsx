@@ -4,7 +4,7 @@ import { ENV_OWNER, ENV_TITLE, textHomeData } from "@/constants";
 export const HomePage: React.FC = () => {
   const renderContactRow = () => {
     return (
-      <Row>
+      <Row parentName="page--home" breakPoint="tablet">
         <Column>
           <Anchor href="tel:1-713-542-4597" text="Phone: (713) 542 - 4597" />
         </Column>

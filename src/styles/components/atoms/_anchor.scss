@@ -2,13 +2,25 @@
 
 a.anchor {
   text-decoration: none;
-  color: $color-caution;
-  border: 0px solid $color-caution;
-  border-bottom-width: 2px;
-  border-left-width: 2px;
-  margin-bottom: $space-s;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  margin-bottom: $space-l;
   padding: 0 $space-s $space-xs $space-s;
   width: max-content;
   border-bottom-left-radius: $border-radius;
   font-size: 20px;
+}
+
+[theme-mode="light"] {
+  a.anchor {
+    color: $color-success;
+    border-color: $color-success;
+  }
+}
+
+[theme-mode="dark"] {
+  a.anchor {
+    color: $color-caution;
+    border-color: $color-caution;
+  }
 }
