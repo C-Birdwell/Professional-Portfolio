@@ -1,15 +1,20 @@
 import type { ModalTemplateProps } from "./index.types";
-import { Card, Button, ModalNav, Heading } from "@/components";
+import {
+  Card,
+  Button,
+  //ModalNav,
+  Heading,
+} from "@/components";
 
 export const ModalTemplate: React.FC<ModalTemplateProps> = ({
   title,
   sizeType = "medium",
   backgroundTheme = "light",
   children,
-  modalIndex,
-  modalIndexLength,
-  onNext,
-  onPrev,
+  // modalIndex,
+  // modalIndexLength,
+  // onNext,
+  // onPrev,
   onDismiss,
   customActions,
 }) => {
@@ -37,14 +42,14 @@ export const ModalTemplate: React.FC<ModalTemplateProps> = ({
         />
       </div>
       <div className="modal_card_content">{children}</div>
-      <ModalNav
+      {/* <ModalNav
         modalIndex={modalIndex}
         modalIndexLength={modalIndexLength}
         onNext={onNext}
         onPrev={onPrev}
         onDismiss={onDismiss}
         customActions={customActions}
-      />
+      /> */}
     </Card>
   );
 };

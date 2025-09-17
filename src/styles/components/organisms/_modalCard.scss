@@ -21,7 +21,8 @@ $card-sizes: "small" 400px 5% 400px, "medium" 1000px 10% 80%, "large" 95% 5% 90%
 
 @mixin set-card-sizes($name, $maxWidth, $top, $height) {
   &.card--#{$name} {
-    max-width: $maxWidth;
+    // max-width: $maxWidth;
+    // min-width: $maxWidth;
     top: $top;
     height: $height;
     @media only screen and (max-width: $breakpoint-mobile) {
@@ -40,16 +41,13 @@ div.modal_card {
   position: absolute;
   z-index: 400;
   margin: 0 auto;
-  left: 50%;
-  right: 50%;
   background-color: var(--color-background-primary);
-  transform: translateX(-50%);
   border: 2px solid transparent;
-  width: calc(100% - $space-xl);
+  width: 90%;
+  left: 5%;
   padding: 0 0 0 0;
   @include drop-shadow(rgba($color-dark, 0.8));
-  @include animate-slide_in-vertical(100vh, 0.25s, -50%);
-
+  @include animate-slide-in_bottom-vertical(50vh, $speed-050);
   &_header {
     text-align: center;
     box-sizing: border-box;
@@ -90,6 +88,14 @@ div.modal_card {
         height: calc(100% - ($height-modal-offset));
       }
     }
+  }
+
+  &_contact {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+    margin: 0 auto;
   }
   @each $name, $maxWidth, $top, $height in $card-sizes {
     @include set-card-sizes($name, $maxWidth, $top, $height);

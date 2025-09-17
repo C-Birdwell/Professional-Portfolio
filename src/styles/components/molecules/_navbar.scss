@@ -13,6 +13,7 @@ nav {
     font-size: 18px;
     text-decoration: none;
     position: initial;
+    align-self: center;
     &.active {
       color: var(--color-text);
       &::after {

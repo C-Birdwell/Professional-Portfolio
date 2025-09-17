@@ -1,3 +1,4 @@
+import { ModalContact } from "@/components";
 import type { ModalRoute } from "@/lib";
 
 export const modalRoutes = (selection: "contact" | ""): ModalRoute[] => {
@@ -11,9 +12,7 @@ export const modalRoutes = (selection: "contact" | ""): ModalRoute[] => {
     id,
   });
 
-  const slidesContact = [
-    createSlide("Example Slide One", <h3>CONTACT!</h3>, "contact-1"),
-  ];
+  const slidesContact = [createSlide("CONTACT", <ModalContact />, "contact-1")];
 
   switch (selection) {
     case "contact":

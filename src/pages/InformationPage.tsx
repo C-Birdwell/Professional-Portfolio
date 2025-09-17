@@ -40,6 +40,10 @@ export const InformationPage: React.FC = () => {
         organization. Block Element Method (BEM) is implemented in the
         stylesheets.
       </p>
+      <p>
+        This site is hosted on GithubPages and is deployed via gh-pages by
+        running "npm run deploy".
+      </p>
     </PageTemplate>
   );
 };

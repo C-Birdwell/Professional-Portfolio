@@ -26,10 +26,14 @@
         background-color: var(--color-background-secondary);
         border: 2px solid var(--color-primary);
         border-radius: $border-radius;
-        width: 95%;
+        width: 90%;
         justify-content: center;
         align-items: center;
         text-decoration: none;
+      }
+      .button {
+        width: 90%;
+        align-self: center;
       }
     }
   }
