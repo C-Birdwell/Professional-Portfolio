@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.page--links {
+  .page_card_title {
+    margin-bottom: $space-xl;
+  }
+}
