@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { Header, Footer, FancyBackground } from "@/components";
-import { headerCLS, ENV_BASENAME } from "@/constants";
+import { ENV_BASENAME } from "@/constants";
 import { useWindowDimensions } from "@/hooks";
 import { PagesRoutes } from "@/routes";
 import { Modal } from "@/pages";
@@ -13,7 +13,7 @@ export const AppRoute = () => {
     <BrowserRouter basename={ENV_BASENAME}>
       <FancyBackground />
       <Modal />
-      <Header className={headerCLS} />
+      <Header />
       <PagesRoutes />
       <Footer />
     </BrowserRouter>

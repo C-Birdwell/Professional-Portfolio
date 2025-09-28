@@ -11,7 +11,7 @@ import {
 import { useStoreSelector, useActionCreators } from "@/hooks";
 
 import { linksArray } from "./utils";
-import { BREAKPOINT_TABLET, COLOR_DARK } from "@/constants";
+import { BREAKPOINT_TABLET, COLOR_DARK, headerCLS } from "@/constants";
 import {
   type RootState,
   _modalSetBackgroundColor,
@@ -51,8 +51,8 @@ export const Header: FC = () => {
 
   return (
     <>
-      <header className="header">
-        <Row parentName="header">
+      <header className={headerCLS}>
+        <Row parentName={headerCLS}>
           <Column classNames={["justify-center", "align-start"]}>
             <Logo onDismiss={onDismiss} />
           </Column>
@@ -60,7 +60,7 @@ export const Header: FC = () => {
             {desktopLayout ? (
               <Navbar
                 links={linksArray}
-                parentName="header"
+                parentName={headerCLS}
                 onDismiss={() => {}}
                 actionCTA={actionCTA}
                 activeLink={activeLink}
