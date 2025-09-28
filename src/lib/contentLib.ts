@@ -4,6 +4,7 @@ export type Employment = {
   industry: string;
   date: string;
   text: string;
+  skills: string[];
 };
 
 export type SkillsImageData = { path: string; labels: string[] }[];

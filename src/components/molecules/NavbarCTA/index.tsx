@@ -1,8 +1,15 @@
+import { iconDataNames } from "@/constants";
 import type { NavbarCTAProps } from "./index.types";
-import { Button } from "@/components/atoms";
+import { ButtonIcon } from "@/components";
 
 export const NavbarCTA: React.FC<NavbarCTAProps> = ({ onPress }) => {
+  const { satellite } = iconDataNames;
   return (
-    <Button backgroundTheme="primary" buttonText="CONTACT" onClick={onPress} />
+    <ButtonIcon
+      backgroundTheme="primary"
+      buttonText="CONTACT"
+      onClick={onPress}
+      icon={satellite}
+    />
   );
 };

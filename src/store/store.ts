@@ -1,22 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { EXAMPLE, INTERFACE, MODAL, BACKGROUND } from "@/constants";
-import {
-  backgroundReducer,
-  exampleReducer,
-  interfaceReducer,
-  modalReducer,
-} from "./slices";
+import { INTERFACE, MODAL, BACKGROUND } from "@/constants";
+import { backgroundReducer, interfaceReducer, modalReducer } from "./slices";
 
 export const store = configureStore({
   reducer: {
     [BACKGROUND]: backgroundReducer,
     [INTERFACE]: interfaceReducer,
-    [EXAMPLE]: exampleReducer,
     [MODAL]: modalReducer,
     // [apiSlice.reducerPath]: apiSlice.reducer
   },
   devTools: true,
+  // For CRUD operations implementation is pending
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat()
 });
 

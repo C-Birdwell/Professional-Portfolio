@@ -1,12 +1,22 @@
-import { Card, Column, Heading, Row } from "@/components";
+import { Card, Column, Heading, Icon, Row } from "@/components";
 import type { EmploymentProps } from "./index.types";
+import { iconDataNames } from "@/constants";
 
 export const Employment: React.FC<EmploymentProps> = ({
   employment,
   flipIn,
   lastItem,
 }) => {
-  const { company, role, industry, date, text } = employment;
+  const { company, role, industry, date, text, skills } = employment;
+
+  const { star } = iconDataNames;
+
+  const skillsList = () => {
+    return skills.map((skill, i) => {
+      return <li key={`${company}-${skill}-${i}`}>{skill}</li>;
+    });
+  };
+
   return (
     <Card
       border
@@ -29,6 +39,9 @@ export const Employment: React.FC<EmploymentProps> = ({
       </Row>
 
       <p className="card--employment_text">{text}</p>
+      <ul>
+        <Icon icon={star} /> {skillsList()}
+      </ul>
     </Card>
   );
 };

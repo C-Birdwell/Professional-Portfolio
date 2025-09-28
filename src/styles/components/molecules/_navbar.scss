@@ -32,6 +32,9 @@ nav {
         transform: translateX(calc(-50% - 10px));
       }
     }
+    &:hover {
+      color: var(--color-text);
+    }
   }
 }
 

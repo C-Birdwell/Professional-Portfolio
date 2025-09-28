@@ -1,4 +1,4 @@
-import { Anchor, Column, PageTemplate, Row } from "@/components";
+import { Anchor, Card, Column, PageTemplate, Row } from "@/components";
 import { linksArray } from "@/constants";
 import type { LinksArray } from "@/lib";
 import { chunkArray } from "@/utils";
@@ -10,9 +10,11 @@ export const LinksPage: React.FC = () => {
     return data.map((link, i) => {
       const { text, href, target } = link;
       return (
-        <Column key={`link-page-link-${i}`}>
-          <Anchor href={href} text={text} target={target}></Anchor>
-        </Column>
+        <Card key={`link-page-link-${i}`} border classNames={["transparent"]}>
+          <Column classNames={["justify-center", "align-center"]}>
+            <Anchor href={href} text={text} target={target} />
+          </Column>
+        </Card>
       );
     });
   };

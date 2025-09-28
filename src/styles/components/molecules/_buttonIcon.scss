@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    path {
+      fill: inherit;
+    }
   }
   .button_text {
     width: 75%;

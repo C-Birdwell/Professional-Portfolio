@@ -15,6 +15,7 @@
   &--#{$name} {
     color: $textColor;
     background-color: rgba($color, $opacity);
+    fill: $textColor;
     @if $hoverState {
       &:hover {
         background-color: color.adjust(

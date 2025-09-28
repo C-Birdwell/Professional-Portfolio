@@ -16,7 +16,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
       backgroundTheme={backgroundTheme}
       classNames={["icon"]}
     >
-      <Icon icon={icon}></Icon>
+      <Icon icon={icon} />
     </Button>
   );
 };
