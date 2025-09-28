@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className={footerCLS}>
-      <Row classNames={["theme"]}>
+      <Row classNames={["theme"]} breakPoint="tablet">
         <Column classNames={["justify-center", "align-center"]}>
           <ButtonIcon
             buttonText="Light Theme"

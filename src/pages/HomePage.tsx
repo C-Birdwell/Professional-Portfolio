@@ -5,12 +5,10 @@ export const HomePage: React.FC = () => {
   const renderContactRow = () => {
     return (
       <Row parentName="page--home" breakPoint="tablet">
-        <Column>
+        <Column style={{ marginBottom: "20px" }}>
           <Anchor href="tel:1-713-542-4597" text="Phone: (713) 542 - 4597" />
         </Column>
-        <Column
-        //classNames={["align-end"]}
-        >
+        <Column>
           <Anchor
             href="mailto:Web.By.Birdwell@gmail.com"
             text="Email: Web.By.Birdwell@gmail.com"

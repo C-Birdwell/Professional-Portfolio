@@ -1,6 +1,6 @@
 @use "../../abstracts" as *;
 
-footer.footer {
+.footer {
   grid-area: footer;
   height: $height-footer;
   background-color: var(--color-background-primary);
@@ -10,19 +10,49 @@ footer.footer {
   padding: $space-s 0;
   position: relative;
   z-index: $z-base;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    & {
+      height: 150px;
+    }
+  }
   .row--theme {
-    width: 500px;
-    position: absolute;
-    height: $height-footer - 2px;
-    right: 0px;
-    top: 0px;
+    width: fit-content;
     box-sizing: border-box;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: $space-l;
+    @media only screen and (max-width: $breakpoint-tablet) {
+      & {
+        position: relative;
+        right: 0;
+        padding: 0 $space-l;
+      }
+    }
+    .column {
+      &:first-child {
+        margin-right: $space-s;
+      }
+      &:last-child {
+        margin-left: $space-s;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        &:first-child {
+          margin-right: 0px;
+        }
+        &:last-child {
+          margin-left: 0px;
+        }
+      }
+      margin-bottom: $space-l;
+    }
     .button {
-      width: 200px;
-      @media only screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      min-width: 200px;
+      @media only screen and (max-width: $breakpoint-tablet) {
         & {
-          width: 150px;
+          max-width: 100%;
         }
       }
     }

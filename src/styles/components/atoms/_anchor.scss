@@ -1,10 +1,9 @@
 @use "../../abstracts/" as *;
 
-a.anchor {
+.anchor {
   text-decoration: none;
   border-style: solid;
   border-width: 0 0 2px 2px;
-  margin-bottom: $space-xl;
   padding: 0 $space-s $space-xs $space-s;
   border-bottom-left-radius: $border-radius;
   max-width: max-content;
@@ -15,14 +14,14 @@ a.anchor {
 }
 
 [theme-mode="light"] {
-  a.anchor {
+  .anchor {
     color: $color-success;
     border-color: $color-success;
   }
 }
 
 [theme-mode="dark"] {
-  a.anchor {
+  .anchor {
     color: $color-caution;
     border-color: $color-caution;
   }

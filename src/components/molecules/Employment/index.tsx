@@ -1,6 +1,7 @@
 import { Card, Column, Heading, Icon, Row } from "@/components";
 import type { EmploymentProps } from "./index.types";
 import { iconDataNames } from "@/constants";
+import { splitArrayInHalf } from "@/utils";
 
 export const Employment: React.FC<EmploymentProps> = ({
   employment,
@@ -12,9 +13,40 @@ export const Employment: React.FC<EmploymentProps> = ({
   const { star } = iconDataNames;
 
   const skillsList = () => {
-    return skills.map((skill, i) => {
-      return <li key={`${company}-${skill}-${i}`}>{skill}</li>;
-    });
+    const skillsColumn = splitArrayInHalf(skills);
+
+    return (
+      <Row breakPoint="tablet">
+        <Column>
+          <ul className="card--employment_list">
+            {skillsColumn[0].map((skill, i) => {
+              return (
+                <li
+                  key={`${company}-${skill}-${i}`}
+                  className="card--employment_list_skill"
+                >
+                  <Icon icon={star} /> <span>{skill}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </Column>
+        <Column>
+          <ul className="card--employment_list">
+            {skillsColumn[1].map((skill, i) => {
+              return (
+                <li
+                  key={`${company}-${skill}-${i}`}
+                  className="card--employment_list_skill"
+                >
+                  <Icon icon={star} /> <span>{skill}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </Column>
+      </Row>
+    );
   };
 
   return (
@@ -37,11 +69,10 @@ export const Employment: React.FC<EmploymentProps> = ({
           <p className="card--employment_industry">[ {industry} ]</p>
         </Column>
       </Row>
-
+      <Heading size={6}>Summary:</Heading>
       <p className="card--employment_text">{text}</p>
-      <ul>
-        <Icon icon={star} /> {skillsList()}
-      </ul>
+      <Heading size={6}>Technologies:</Heading>
+      {skillsList()}
     </Card>
   );
 };

@@ -32,4 +32,9 @@ export const linksArray: LinksArray = [
     href: "https://github.com/C-Birdwell/React_19-Typescript-Boilerplate",
     target: "_blank",
   },
+  {
+    text: "Web By Birdwell code repository",
+    href: "https://github.com/C-Birdwell/React_19-Typescript-Boilerplate",
+    target: "_blank",
+  },
 ];

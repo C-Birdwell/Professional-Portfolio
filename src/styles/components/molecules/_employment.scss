@@ -8,18 +8,49 @@
   }
   h5 {
     color: var(--color-secondary);
-    margin-bottom: $space-s;
+    margin-bottom: $space-l;
+    font-size: 24px;
+  }
+  h6 {
+    margin-bottom: $space-l;
   }
   &_industry {
     font-style: italic;
   }
+  ul {
+    margin: 0 0 0 0;
+  }
   @media only screen and (max-width: $breakpoint-tablet) {
     h4,
-    h5 {
+    h5,
+    h6 {
       text-align: center;
     }
+
     &_industry {
       margin-bottom: $space-l;
     }
+  }
+  &_list {
+    list-style-type: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 20px;
+    padding-left: 0px;
+    .icon {
+      display: inline-block;
+      margin-right: $space-s;
+    }
+    &_skill {
+      margin-bottom: $space-m;
+      &:nth-child(even) {
+        .icon path {
+          fill: var(--color-secondary);
+        }
+      }
+    }
+  }
+  &_text {
+    margin-bottom: $space-m;
   }
 }
