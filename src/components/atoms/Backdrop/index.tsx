@@ -5,7 +5,6 @@ import { convertVariantClassNames } from "@/utils";
 export const Backdrop: React.FC<BackdropProps> = ({
   backgroundTheme = COLOR_DARK,
   onDismiss,
-  className = "",
   children,
 }) => {
   const applyClassNames = convertVariantClassNames("backdrop", [

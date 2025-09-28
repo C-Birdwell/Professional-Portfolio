@@ -11,7 +11,6 @@ import {
 import { useStoreSelector, useActionCreators } from "@/hooks";
 
 import { linksArray } from "./utils";
-import type { HeaderProps } from "./index.types";
 import { BREAKPOINT_TABLET, COLOR_DARK } from "@/constants";
 import {
   type RootState,
@@ -26,7 +25,7 @@ const actionCreators = {
   _modalSetModalRoute,
 };
 
-export const Header: FC<HeaderProps> = ({ className }) => {
+export const Header: FC = () => {
   const { _modalSetBackgroundColor, _modalSetVisible, _modalSetModalRoute } =
     useActionCreators(actionCreators);
   const { width, activeLink } = useStoreSelector(
@@ -74,11 +73,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       </header>
       {isActive && !desktopLayout && (
         <>
-          <Backdrop
-            backgroundTheme=""
-            className="mobile"
-            onDismiss={onDismiss}
-          />
+          <Backdrop backgroundTheme="" onDismiss={onDismiss} />
           <MobileNav
             links={linksArray}
             onDismiss={onDismiss}
