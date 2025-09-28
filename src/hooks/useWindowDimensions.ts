@@ -23,10 +23,9 @@ export const useWindowDimensions = () => {
 
     window.addEventListener("resize", windowResize);
 
+    // Only run on mount/unmount
     return () => {
       window.removeEventListener("resize", windowResize);
     };
-  }, [dispatch]); // Only run on mount/unmount
-
-  return null;
+  }, [dispatch]);
 };

@@ -1,9 +1,9 @@
 import type {
   PropChildren,
-  ClassName,
   BackgroundTheme,
   ParentClassName,
   MarginBottom,
+  ClassNamesList,
 } from "@/lib";
 
 export type ButtonProps = {
@@ -11,7 +11,7 @@ export type ButtonProps = {
   disabled?: boolean;
   onClick: React.MouseEventHandler | void;
 } & MarginBottom &
-  ClassName &
   PropChildren &
   BackgroundTheme &
-  ParentClassName;
+  ParentClassName &
+  ClassNamesList;

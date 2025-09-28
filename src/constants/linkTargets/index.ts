@@ -13,7 +13,7 @@ export const linksArray: LinksArray = [
   },
   {
     text: "Resume",
-    href: "https://docs.google.com/document/d/1oFbmDHvAkxxgRhGfVYTcnQB4CDYw22N_sfEI2NBrxL4/edit?usp=sharing",
+    href: "https://drive.google.com/file/d/1p-ptgqvnOYDrkpcGjeXuglALVK6BJDAs/view?usp=sharing",
     target: "_blank",
   },
   {

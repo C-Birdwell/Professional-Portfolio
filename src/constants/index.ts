@@ -1,5 +1,6 @@
 export * from "./classNames";
 export * from "./dataSets";
+export * from "./iconsDef";
 export * from "./linkTargets";
 export * from "./masks";
 export * from "./pageRoutes";

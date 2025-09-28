@@ -1,5 +1,6 @@
 export * from "./AWSCertification";
 export * from "./Backgrounds";
+export * from "./ButtonIcon";
 export * from "./Employment";
 export * from "./InputField";
 export * from "./Logo";

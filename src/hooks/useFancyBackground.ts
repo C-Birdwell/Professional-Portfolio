@@ -51,6 +51,4 @@ export const useFancyBackground = () => {
     _backgroundSetAnimation,
     _backgroundSetBackground,
   ]);
-
-  return null;
 };

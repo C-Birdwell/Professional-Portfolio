@@ -1,4 +1,5 @@
 export * from "./Backgrounds/index.types";
+export * from "./ButtonIcon/index.types";
 export * from "./Employment/index.types";
 export * from "./InputField/index.types";
 export * from "./Logo/index.types";

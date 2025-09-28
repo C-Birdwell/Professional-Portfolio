@@ -1,6 +1,6 @@
 @use "../../abstracts/" as *;
 
-button.button {
+.button {
   -webkit-appearance: none;
   appearance: none;
   display: block;
@@ -9,6 +9,10 @@ button.button {
   cursor: pointer;
   border: 2px solid var(--color-text-primary);
   font-weight: 700;
+  &_text {
+    color: inherit;
+  }
+
   @each $name, $color, $textColor in $color-theme-text {
     @include background-colors-theme($name, $color, $textColor, 1, true);
   }

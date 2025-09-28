@@ -1,3 +1,1 @@
-import type { ClassName } from "@/lib";
-
-export type FooterProps = ClassName;
+//export type FooterProps = {};

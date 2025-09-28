@@ -7,14 +7,14 @@ export const Button: React.FC<ButtonProps> = ({
   onClick = () => alert("Add a Function to this button"),
   children,
   parentName = "",
-  className = "",
   backgroundTheme,
   marginBottom = 0,
+  classNames = [],
 }) => {
   const buttonClassNames = setClassNames("button", parentName, [
-    className,
     disabledClassName(disabled),
     backgroundTheme,
+    ...classNames,
   ]);
   return (
     <button
@@ -23,8 +23,8 @@ export const Button: React.FC<ButtonProps> = ({
       className={buttonClassNames}
       style={{ marginBottom: marginBottom }}
     >
-      {buttonText}
       {children}
+      <div className="button_text">{buttonText}</div>
     </button>
   );
 };

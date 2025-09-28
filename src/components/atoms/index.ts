@@ -4,6 +4,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./Column";
 export * from "./Heading";
+export * from "./Icon";
 export * from "./Input";
 export * from "./Label";
 export * from "./NavLink";

@@ -1,8 +1,9 @@
-import type { FooterProps } from "./index.types";
-import { Button, Row, Column } from "@/components";
+//import type { FooterProps } from "./index.types";
+import { ButtonIcon, Row, Column } from "@/components";
+import { footerCLS } from "@/constants";
 import { setAppTheme } from "@/utils";
 
-export const Footer: React.FC<FooterProps> = ({ className }) => {
+export const Footer: React.FC = () => {
   const buttonHandlerLight = () => {
     setAppTheme("light");
   };
@@ -12,20 +13,22 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
   };
 
   return (
-    <footer className={className}>
+    <footer className={footerCLS}>
       <Row classNames={["theme"]}>
         <Column classNames={["justify-center", "align-center"]}>
-          <Button
+          <ButtonIcon
             buttonText="Light Theme"
             onClick={buttonHandlerLight}
             backgroundTheme="light"
+            icon={"sun"}
           />
         </Column>
         <Column classNames={["justify-center", "align-center"]}>
-          <Button
+          <ButtonIcon
             buttonText="Dark Theme"
             onClick={buttonHandlerDark}
             backgroundTheme="dark"
+            icon={"moon"}
           />
         </Column>
       </Row>
