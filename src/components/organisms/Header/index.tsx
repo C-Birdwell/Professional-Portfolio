@@ -51,7 +51,7 @@ export const Header: FC = () => {
 
   return (
     <>
-      <header className={className}>
+      <header className="header">
         <Row parentName="header">
           <Column classNames={["justify-center", "align-start"]}>
             <Logo onDismiss={onDismiss} />
@@ -60,7 +60,7 @@ export const Header: FC = () => {
             {desktopLayout ? (
               <Navbar
                 links={linksArray}
-                parentName={className}
+                parentName="header"
                 onDismiss={() => {}}
                 actionCTA={actionCTA}
                 activeLink={activeLink}

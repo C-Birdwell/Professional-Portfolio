@@ -8,7 +8,6 @@ export const Backdrop: React.FC<BackdropProps> = ({
   children,
 }) => {
   const applyClassNames = convertVariantClassNames("backdrop", [
-    className,
     backgroundTheme,
   ]);
   return (
