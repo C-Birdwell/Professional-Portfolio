@@ -31,4 +31,4 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploy to S3
-        run: aws s3 sync ./build s3://cbirdwell-portfolio-website-2025 --delete
+        run: aws s3 sync ./dist s3://cbirdwell-portfolio-website-2025 --delete
