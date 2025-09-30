@@ -9,10 +9,10 @@ import { Modal } from "@/pages";
 export const AppRoute = () => {
   useWindowDimensions();
 
+  const basename = import.meta.env.VITE_BASE !== undefined ? ENV_BASENAME : "";
+
   return (
-    <BrowserRouter
-      basename={import.meta.env.VITE_BASE !== undefined ? ENV_BASENAME : ""}
-    >
+    <BrowserRouter basename={basename}>
       <FancyBackground />
       <Modal />
       <Header />
