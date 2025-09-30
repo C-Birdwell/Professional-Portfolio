@@ -1,6 +1,7 @@
 import { formatLink } from "@/utils";
 import type { NavbarProps } from "./index.types";
 import { NavLink, Column, NavbarCTA } from "@/components";
+import { useDetectPathnameOnLoad } from "@/hooks";
 
 export const Navbar: React.FC<NavbarProps> = ({
   links,
@@ -9,6 +10,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   actionCTA,
   activeLink,
 }) => {
+  useDetectPathnameOnLoad();
+
   const linksMapped = links.map((link) => {
     const { target, targetText, type, backgroundTheme } = link;
     const isActive = formatLink(target) === activeLink;
