@@ -53,6 +53,9 @@
     }
     &_skill {
       margin-bottom: $space-m;
+      .icon path {
+        fill: var(--color-primary);
+      }
       &:nth-child(even) {
         .icon path {
           fill: var(--color-secondary);
