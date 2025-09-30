@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 // Public path URL when served in development or production environments.
-const base = "/Professional-Portfolio";
+//const base = "/Professional-Portfolio";
+const base = "";
 
 const css = {
   devSourcemap: true,
