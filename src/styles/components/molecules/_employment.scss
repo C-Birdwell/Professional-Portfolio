@@ -2,6 +2,7 @@
 
 #root .card--employment {
   background-color: transparent;
+  display: inline-table;
   h4 {
     color: var(--color-primary);
     margin-bottom: $space-s;
@@ -27,18 +28,25 @@
       text-align: center;
     }
     h4 {
-      font-size: 25px;
-    }
-    h5 {
       font-size: 22px;
     }
-    &_date {
+    h5,
+    h6 {
       font-size: 20px;
+    }
+    &_date {
+      font-size: 18px;
     }
 
     &_industry {
       margin-bottom: $space-l;
-      font-size: 20px;
+      font-size: 15px;
+    }
+    &_text {
+      font-size: 16px;
+    }
+    &_list_skill {
+      font-size: 15px;
     }
   }
   &_list {
