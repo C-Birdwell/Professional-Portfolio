@@ -3,7 +3,7 @@ import { ENV_OWNER } from "../theme";
 export const textHome_0 =
   "A senior level web developer and UI/UX Designer with over ten years of experience.";
 
-export const textHome_1 = `${ENV_OWNER} is an accomplished web developer and frontend engineer that has worked in the sectors of digital marketing, financial technology, online entertainment, and bespoke projects at the behest small businesses.`;
+export const textHome_1 = `${ENV_OWNER} is an accomplished web developer and frontend engineer that has worked in the sectors of digital marketing, financial technology, online entertainment, and web projects for small businesses.`;
 
 export const textHome_2 = `Along with his considerable experience in the private sector ${ENV_OWNER} has over five years experience supporting both local and federal government agencies.`;
 

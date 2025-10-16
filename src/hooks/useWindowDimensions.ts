@@ -6,7 +6,6 @@ export const useWindowDimensions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Initial dispatch on mount
     const initialDimensions = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -23,7 +22,6 @@ export const useWindowDimensions = () => {
 
     window.addEventListener("resize", windowResize);
 
-    // Only run on mount/unmount
     return () => {
       window.removeEventListener("resize", windowResize);
     };
