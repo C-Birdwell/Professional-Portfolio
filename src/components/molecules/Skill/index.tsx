@@ -2,7 +2,12 @@ import { Card, Column, Row } from "@/components/atoms";
 import type { SkillProps } from "./index.types";
 import { arrayJoin } from "@/utils";
 
-export const Skill: React.FC<SkillProps> = ({ path, labels, flipIn }) => {
+export const Skill: React.FC<SkillProps> = ({
+  path,
+  labels,
+  flipIn,
+  fadeIn = false,
+}) => {
   const renderLabels = () => {
     return labels.map((label) => {
       return (
@@ -16,7 +21,12 @@ export const Skill: React.FC<SkillProps> = ({ path, labels, flipIn }) => {
     });
   };
   return (
-    <Card classNames={["skill", arrayJoin(labels, "-")]} border flipIn={flipIn}>
+    <Card
+      classNames={["skill", arrayJoin(labels, "-")]}
+      border
+      flipIn={flipIn}
+      fadeIn={fadeIn}
+    >
       <Column classNames={["align-center"]}>
         <div className="skill_image">
           <img

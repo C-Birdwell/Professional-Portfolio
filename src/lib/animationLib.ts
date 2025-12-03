@@ -5,5 +5,5 @@ export type AnimationState = {
 };
 
 export type FlipIn = {
-  flipIn: "left" | "right";
+  flipIn?: "left" | "right";
 };

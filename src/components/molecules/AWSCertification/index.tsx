@@ -1,9 +1,10 @@
 import { Column, Row, Skill } from "@/components";
-import { awsImageData } from "@/constants";
+import { certificationData } from "@/constants";
 
 export const AWSCertification = () => {
-  const imagePract = awsImageData[0];
-  const imageDev = awsImageData[1];
+  const imagePract = certificationData[0];
+  const imageDev = certificationData[1];
+  const imageCAPM = certificationData[2];
 
   return (
     <Row gutter={10} breakPoint="tablet">
@@ -15,7 +16,10 @@ export const AWSCertification = () => {
         />
       </Column>
       <Column>
-        <Skill path={imageDev.path} labels={imageDev.labels} flipIn="right" />
+        <Skill path={imageDev.path} labels={imageDev.labels} fadeIn />
+      </Column>
+      <Column>
+        <Skill path={imageCAPM.path} labels={imageCAPM.labels} flipIn="right" />
       </Column>
     </Row>
   );

@@ -21,10 +21,11 @@ import {
   image_vscode,
   aws_dev,
   aws_pract,
+  capm,
 } from "@/assets";
 import type { SkillsImageData } from "@/lib";
 
-export const awsImageData: SkillsImageData = [
+export const certificationData: SkillsImageData = [
   {
     path: aws_pract,
     labels: [
@@ -38,6 +39,10 @@ export const awsImageData: SkillsImageData = [
       "AWS Certified Developer - Associate",
       "522956e59e6e476194e35bd549cba969",
     ],
+  },
+  {
+    path: capm,
+    labels: ["Certified Associate in Project Management", "4237701"],
   },
 ];
 
